@@ -11,6 +11,7 @@ app.options('*', cors());
 
 const productsRouter = require('./routes/products');
 const categoryRouter = require('./routes/categories');
+const userRouter     = require('./routes/users');
 
 const api = process.env.API_URL;
 
@@ -21,6 +22,7 @@ app.use(morgan('tiny'));
 //Routers
 app.use(`${api}/products`, productsRouter);
 app.use(`${api}/categories`, categoryRouter);
+app.use(`${api}/users`, userRouter);
 
 
 //Database Connection

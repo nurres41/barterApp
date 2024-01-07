@@ -44,6 +44,7 @@ const userSchema = new mongoose.Schema({
 
 });
 
+// _id to id
 userSchema.virtual('id').get(function () {
     return this._id.toHexString();
 });
